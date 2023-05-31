@@ -163,6 +163,7 @@ func checkOperatorHealth(ctx context.Context, client ClusterOperatorsGetter, exp
 	available := false
 	var availableCondition *configv1.ClusterOperatorStatusCondition
 	progressing := true
+	var progressingCondition *configv1.ClusterOperatorStatusCondition
 	degraded := true
 	var degradedCondition *configv1.ClusterOperatorStatusCondition
 	for i := range actual.Status.Conditions {
